@@ -35,7 +35,7 @@
 #endif
 
  // Applied to both motor and controller tmeperature sensor
-#define MAX_TEMPERATURE							85
+#define MAX_TEMPERATURE							70
 
 // Current ramp down starts at MAX_TEMPERATURE - 5.
 #define MAX_TEMPERATURE_RAMP_DOWN_INTERVAL		5
@@ -51,7 +51,7 @@
 	#define MAX_CADENCE_RPM_X10					1500
 #elif defined(BBSHD)
 	// Measured on BBSHD at 48V
-	#define MAX_CADENCE_RPM_X10					1680
+	#define MAX_CADENCE_RPM_X10					3000
 #else
 	#define MAX_CADENCE_RPM_X10					1200
 #endif

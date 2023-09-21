@@ -253,6 +253,60 @@ namespace BBSFW.ViewModel
 			}
 		}
 
+		public bool UsePretension
+		{
+			get { return _config.UsePretension; }
+			set
+			{
+				if (_config.UsePretension != value)
+				{
+					_config.UsePretension = value;
+					OnPropertyChanged(nameof(UsePretension));
+				}
+			}
+		}
+
+		public bool UseSmoothShift
+		{
+			get { return _config.UseSmoothShift; }
+			set
+			{
+				if (_config.UseSmoothShift != value)
+				{
+					_config.UseSmoothShift = value;
+					OnPropertyChanged(nameof(UseSmoothShift));
+				}
+			}
+		}
+
+		public uint PretensionSpeedCutoffKph
+		{
+			get { return _config.PretensionSpeedCutoffKph; }
+			set
+			{
+				if (_config.PretensionSpeedCutoffKph != value)
+				{
+					_config.PretensionSpeedCutoffKph = value;
+					OnPropertyChanged(nameof(PretensionSpeedCutoffKph));
+					OnPropertyChanged(nameof(PretensionSpeedCutoffMph));
+				}
+			}
+		}
+
+		public uint PretensionSpeedCutoffMph
+		{
+			get { return KphToMph(_config.PretensionSpeedCutoffKph); }
+			set
+			{
+				if (_config.PretensionSpeedCutoffKph != MphToKph(value))
+				{
+					_config.PretensionSpeedCutoffKph = MphToKph(value);
+					OnPropertyChanged(nameof(PretensionSpeedCutoffKph));
+					OnPropertyChanged(nameof(PretensionSpeedCutoffMph));
+				}
+			}
+		}
+
 		public Configuration.TemperatureSensor UseTemperatureSensor
 		{
 			get { return _config.UseTemperatureSensor; }

@@ -159,10 +159,12 @@ static void load_default_config()
 	g_config.max_battery_x100v_u16l = (uint8_t)5460;
 	g_config.max_battery_x100v_u16h = (uint8_t)(5460 >> 8);
 	g_config.low_cut_off_v = 42;
-
 	g_config.use_speed_sensor = 1;
 	g_config.use_shift_sensor = HAS_SHIFT_SENSOR_SUPPORT;
+	g_config.use_smooth_shift = 0;
 	g_config.use_push_walk = 1;
+	g_config.use_pretension = 0;
+	g_config.pretension_speed_cutoff_kph = 8;
 	g_config.use_temperature_sensor = TEMPERATURE_SENSOR_CONTR | TEMPERATURE_SENSOR_MOTOR;
 
 	g_config.lights_mode = LIGHTS_MODE_DEFAULT;
