@@ -1,0 +1,5 @@
+#default code owners
+*       @skeeterman007 @danielnilsson9
+
+#Pretension Code Owner
+/src/ @EigenMania
