@@ -14,6 +14,7 @@ The firmware is also compatible with the TongSheng TSDZ2 controller but requires
 
 **Download**  
 https://github.com/skeeterman007/bbs-fw/releases/tag/Alpha
+
 **Install**  
 https://github.com/danielnilsson9/bbshd-fw/wiki/Flashing-the-Firmware
 
