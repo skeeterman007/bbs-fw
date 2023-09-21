@@ -737,6 +737,7 @@ bool apply_low_voltage_limit(uint8_t* target_current)
 	return false;
 }
 
+#if HAS_SHIFT_SENSOR_SUPPORT
 bool apply_shift_sensor_interrupt(uint8_t* target_current)
 {
 	static uint32_t shift_sensor_act_ms = 0;
