@@ -13,8 +13,7 @@ The firmware is also compatible with the TongSheng TSDZ2 controller but requires
 ⚠️ Warning: The firmware should NOT be flashed or configured while the eBike battery is charging!
 
 **Download**  
-https://github.com/danielnilsson9/bbshd-fw/releases
-
+https://github.com/skeeterman007/bbs-fw/releases/tag/Alpha
 **Install**  
 https://github.com/danielnilsson9/bbshd-fw/wiki/Flashing-the-Firmware
 
