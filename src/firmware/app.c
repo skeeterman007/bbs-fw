@@ -18,10 +18,10 @@
 #include "util.h"
 #include "system.h"
 
- // Compile time options
+// Compile time options
 
- // Number of PAS sensor pulses to engage cruise mode,
- // there are 24 pulses per revolution.
+// Number of PAS sensor pulses to engage cruise mode,
+// there are 24 pulses per revolution.
 #define CRUISE_ENGAGE_PAS_PULSES				12
 
 // Number of PAS sensor pulses to disengage curise mode
@@ -168,7 +168,7 @@ void app_process()
 #if HAS_SHIFT_SENSOR_SUPPORT
 		apply_shift_sensor_interrupt(&target_current);
 #else
-		false;
+	false;
 #endif
 	bool is_limiting = speed_limiting || thermal_limiting || lvc_limiting || shift_limiting;
 	bool is_braking = apply_brake(&target_current);
@@ -518,7 +518,7 @@ bool apply_throttle(uint8_t* target_current, uint8_t throttle_percent)
 			(
 				g_config.throttle_global_spd_lim_opt == THROTTLE_GLOBAL_SPEED_LIMIT_ENABLED ||
 				(g_config.throttle_global_spd_lim_opt == THROTTLE_GLOBAL_SPEED_LIMIT_STD_LVLS && operation_mode == OPERATION_MODE_DEFAULT)
-				);
+			);
 
 		if (current >= *target_current || global_throttle_limit_active)
 		{
