@@ -24,8 +24,10 @@ namespace BBSFW.ViewModel
 			}
 		}
 
+
 		public static List<uint> StartupAssistLevelOptions { get; } =
 			new List<uint>() { 0, 1, 2, 3, 4, 5, 6, 7 ,8, 9 };
+
 
 		public static List<ValueItemViewModel<Configuration.AssistModeSelect>> AssistModeSelectOptions { get; } =
 			new List<ValueItemViewModel<Configuration.AssistModeSelect>>
@@ -129,6 +131,8 @@ namespace BBSFW.ViewModel
 				}
 			}
 		}
+
+
 
 		public uint MaxCurrentAmps
 		{
@@ -552,6 +556,7 @@ namespace BBSFW.ViewModel
 			}
 		}
 
+
 		private List<AssistLevelViewModel> _standardAssistLevels;
 		public List<AssistLevelViewModel> StandardAssistLevels
 		{
@@ -567,7 +572,6 @@ namespace BBSFW.ViewModel
 		}
 
 		private List<AssistLevelViewModel> _sportAssistLevels;
-
 		public List<AssistLevelViewModel> SportAssistLevels
 		{
 			get { return _sportAssistLevels; }
@@ -580,6 +584,7 @@ namespace BBSFW.ViewModel
 				}
 			}
 		}
+
 
 		public ConfigurationViewModel()
 		{
@@ -598,6 +603,8 @@ namespace BBSFW.ViewModel
 				_sportAssistLevels.Add(new AssistLevelViewModel(this, i, _config.SportAssistLevels[i]));
 			}
 		}
+
+
 
 		public void ReadConfiguration(string filepath)
 		{
@@ -621,6 +628,7 @@ namespace BBSFW.ViewModel
 			return _config;
 		}
 
+
 		private static uint KphToMph(uint kph)
 		{
 			return (uint)Math.Round(kph * 0.621371192);
@@ -630,6 +638,7 @@ namespace BBSFW.ViewModel
 		{
 			return (uint)Math.Round(mph * 1.609344);
 		}
+
 		private void TriggerPropertyChanges()
 		{
 			foreach (var prop in typeof(ConfigurationViewModel).GetProperties())
@@ -644,5 +653,7 @@ namespace BBSFW.ViewModel
 			StandardAssistLevels = StandardAssistLevels.ToList();
 			SportAssistLevels = SportAssistLevels.ToList();
 		}
+
+
 	}
 }
