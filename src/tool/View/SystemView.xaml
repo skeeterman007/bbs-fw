@@ -247,7 +247,7 @@
 					<TextBlock Width="300" TextWrapping="Wrap">
 							Apply 1% of Max Current when above a threshold road speed to pre-tension the drivetrain.
 							This makes it nicer for more aggressive PAS / throttle settings since freewheel pawls
-							will not get smacked if there is play in the drivetrain system.
+							will not get smacked if there is play in the drivetrain system. (CREDIT @EiganMania)
 					</TextBlock>
 				</TextBlock.ToolTip>
 				</TextBlock>
